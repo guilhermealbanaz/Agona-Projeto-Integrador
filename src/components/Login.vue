@@ -78,7 +78,7 @@
                 </transition>
             </div>
         </div>
-        
+                
 </template>
 
 <script>
@@ -95,40 +95,37 @@
     methods: {
         changeAction(action) {
         this.action = action; 
-},
-            async login(){
-                try {
-                    await fb.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
-                    this.$router.push({name:'home'})
-                } catch(error) {
-                    const errorCode = error.code
-                    switch(errorCode){
-                        case 'auth/wrong-password':
-                            window.alert('A senha está errada!')
-                            break
-                        case "auth/invalid-email":
-                            this.$swal({title: 'O email é inválido!', icon:'error'})
-                            break
-                        case "auth/user-not-found":
-                            if(confirm('O usuário não foi encontrado, deseja criar uma nova conta?')){
-                                this.changeAction('register')
-                            }
-                            break
-                    }
-                }
-            },
-            async register(){
-                try {
-                    await fb.auth.createUserWithEmailAndPassword(this.usercreate.email, this.usercreate.password)
-                    this.$router.push({name: 'home'})
-                }catch(error){
-                    console.log(error)
-
+        },
+        async login(){
+            try {
+                await fb.auth.signInWithEmailAndPassword(this.user.email, this.user.password)
+                this.$router.push({name:'home'})
+            } catch(error) {
+                const errorCode = error.code
+                switch(errorCode){
+                    case 'auth/wrong-password':
+                        this.$swal({title: 'A senha está incorreta', icon:'error'})
+                        break
+                    case "auth/invalid-email":
+                        this.$swal({title: 'O email é inválido!', icon:'error'})
+                        break
+                    case "auth/user-not-found":
+                        if(confirm('O usuário não foi encontrado, deseja criar uma nova conta?')){
+                            this.changeAction('register')
+                        }
+                        break
                 }
             }
-         
         },
-        name: 'Login',
-
+        async register(){
+            try {
+                await fb.auth.createUserWithEmailAndPassword(this.usercreate.email, this.usercreate.password)
+                this.$router.push({name: 'home'})
+            }catch(error){
+                console.log(error)
+            }
+        },
+        name: 'Login'
+    },     
     }
 </script>
