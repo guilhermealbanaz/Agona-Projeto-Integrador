@@ -106,6 +106,9 @@
 }
 .link-perfil {
     text-decoration: none;
+    background-color: #1c1c1c;
+    height: 50px;
+    border-radius: 10%;
 }
 .main {
     width: 100%;
@@ -129,19 +132,30 @@
 }
 .box-menu {
     width: 300px;
-    height: 150px;
+    height: 110px;
+    padding-top: 40px;
     position: relative;
     margin: 40px;
     margin-top: 70px;
     border-radius: 20px;
-    transition: all 0.1s ease-out;
     background-image: linear-gradient(to bottom, #4FB069, #1c1c1c);
+}
+.box-menu:hover {
+    background-image: linear-gradient(to left, #1c1c1c, #4FB069);
+    cursor: pointer;
+}
+.texto-comuni-destaque {
+    font-size: 30px;
+    color: #E4E2FA;
+    text-align: center;
+
 }
 .container-home {
     width: 75%;
     height: 80%;
     position: fixed;
-    display: inline-block;
+    display: flex;
+    flex-wrap: wrap;
     left: 5%;
     top: 15%;
     overflow-y: scroll;
@@ -153,7 +167,9 @@
     background-color: transparent;
 }
 .box-home {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 400px;
     width: 200px;
     border-radius: 20px;
@@ -171,14 +187,25 @@
 .box-conteudo-home:hover {
     background-color: #397749;
 }
-
+.text-conteudo-home {
+    margin: 10px;
+    text-align: center;
+}
+.text-filtro-conteudo {
+    margin-left: 8px;
+    display: flex;
+}
+.imagem-home {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    margin: 20%;
+}
 /*LOGIN/G*/
-
 body{
     margin: 0;
     padding: 0;
 }
-
 #login {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
@@ -195,6 +222,10 @@ body{
     margin-top: 75px;
 
     
+}
+.form-control {
+    background-color: #262626;
+    color: #4FB069;
 }
 .link, .link:hover {
     color: #4FB069;
@@ -383,7 +414,9 @@ body{
     position: fixed;
     top: 55%;
     left: 5%;
-    display: inline-block;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     overflow-y: scroll;
 }
 .menu-comunidades::-webkit-scrollbar {
@@ -402,6 +435,10 @@ body{
 .menu-lat-comunidades::-webkit-scrollbar {
     width: 0;
 }
+.container-conteudo-comunidades {
+    display: flex;
+    flex-direction: row;
+}
 .box-titulo-comunidade-destaque {
     background-color: #1c1c1c;
     width: 100%;
@@ -417,10 +454,17 @@ body{
     width: 400px;
     height: 180px;
     background-color: #262626;
+    display: inline-block;
     margin: 30px;
     margin-top: 65px;
 }
-.box-conteudo-comunidades, box-adicionar-comunidades {
+.conteudo-chats-destaque {
+    font-size: 40px;
+    color: #4FB069;
+    margin: 10px;
+    margin-top: 60px;
+}
+.box-conteudo-comunidades, .box-adicionar-comunidades {
     width: 300px;
     height: 180px;
     background-color: #4FB069;
@@ -428,13 +472,39 @@ body{
     margin-right: 30px;
     margin-bottom: 50px;
 }
+.box-adicionar-comunidades:hover {
+    cursor: pointer;
+    background-color: #397749;
+    color: #E4E2FA;
+}
 .linha-comunidades {
     width: 67.55%;
     border: 3px solid #262626;
     position: fixed;
-    top: 42.5%;
+    top: 44.5%;
     left: 5%;
 }
+.imagem-comunidades {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-size: 0;
+}
+.texto-imagem-comunidades {
+    position: relative;
+    font-size: 0px;
+}
+.imagem-comunidades:hover {
+    cursor: pointer;
+    opacity: 0.4;
+}
+.criar-comunidades {
+    font-size: 150px;
+    text-align: center;
+    position: relative;
+    margin-top: 5px;
+}
+
 /* Sobre */
 
 .corpo-container-home {
