@@ -86,6 +86,7 @@
     export default {
     data(){
         return {
+            conteudo: ["Cadastro", "Login"], // CRIAR UM BOTÃO QUE MUDE ALÉM DA AÇÃO, O SEU CONTEUDO, FAZENDO COM QUE SÓ SEJA UM BOTÃO E NAO DOIS
             action: 'login',
             user:{},
             usercreate:{},

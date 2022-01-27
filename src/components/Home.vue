@@ -102,6 +102,38 @@
 </template>
 
 <script>
-
-
+    export default {
+    data() {
+        return {
+        dicas: [
+            {
+            imagens: ["video", "pergunta", "noticia"],
+            conteudo: [
+                "Novo patch de atualizações do GTA Online",
+                "Existe outra maneira de comprar os carros do passe, ou eu deveria comprá-lo?",
+                "Veja os proximos participantes do major 2022",
+                "Novo trailer Da Agente Neon que saiu hoje",
+                "Será que está valendo a pena comprar o passe novo do Rocket?",
+                "Qual que está mais forte no meta de hoje, a M4a4 ou a M4 silenciada?",
+                "Modo de conseguir um milhão de reais fazendo o novo roubo ao cassino",
+                "Como faço para conseguir o milagre lamina da luz sagrada?",
+                "As melhores smokes para o mapa da Mirage, apenas 64 tick",
+                "Alguém ai quer jogar umas ranqueadas comigo?, estou Diamante, adiciona ai DarkSun#4967",
+                "Estou com uma duvida: Como faço para comprar Valorant Points com o boleto?",
+                "As melhores customizações para o seu carro favorito do Rocket",
+                "Faz 3 horas que estou tentando matar esse boss e não consigo, alguem pode me ajudar?",
+                "Achei esse mod de Gta muito legal e queria compartilhar com vocês",
+            ],
+            filtro: [
+                "GTA",
+                "Rocket League",
+                "Counter Strike",
+                "Valorant",
+                "Dark Souls",
+            ],
+            },
+        ],
+        };
+    },
+    };
 </script>

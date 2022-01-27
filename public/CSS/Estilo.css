@@ -229,13 +229,15 @@ body{
 }
 .link, .link:hover {
     color: #4FB069;
-   position: fixed;
+    position: fixed;
+    z-index: 10;
     left: 43%;
 }
 
 .link2, .link2:hover{
     color: #4FB069;
-   position: fixed;
+    position: fixed;
+    z-index: 10;
     right: 43%;
 }
 
