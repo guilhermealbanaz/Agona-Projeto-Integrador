@@ -13,7 +13,7 @@
     </div>
     <div class="box-perfil">
         <h2 class="text-green">Perfil</h2>
-         <p class="text-white">{{nome}}</p>  <!-- ou user, caso a pessoa não esteja logado  -->
+         <p class="text-white"></p>  <!-- ou user, caso a pessoa não esteja logado  -->
         <button @click.prevent="logout" class="link-perfil text-white">Gerenciar Perfil</button>
     </div>
     </div>

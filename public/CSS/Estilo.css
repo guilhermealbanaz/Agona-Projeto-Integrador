@@ -467,6 +467,7 @@ body{
     margin-top: 60px;
 }
 .box-conteudo-comunidades, .box-adicionar-comunidades {
+    
     width: 300px;
     height: 180px;
     background-color: #4FB069;
@@ -475,6 +476,7 @@ body{
     margin-bottom: 50px;
 }
 .box-adicionar-comunidades:hover {
+    transition: ease-out;
     cursor: pointer;
     background-color: #397749;
     color: #E4E2FA;
@@ -487,6 +489,7 @@ body{
     left: 5%;
 }
 .imagem-comunidades {
+    transition: ease-out .2s;
     width: 100%;
     height: 100%;
     position: relative;

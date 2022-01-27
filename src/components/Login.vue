@@ -126,7 +126,6 @@
                 console.log(error)
             }
         },
-        name: 'Login'
     },     
     }
 </script>

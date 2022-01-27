@@ -16,9 +16,8 @@ firebase.initializeApp(firebaseConfig)
 const db = firebase.firestore()
 const auth = firebase.auth()
 
-const profileCollection = db.collection('profile')
-const tasksCollection = db.collection('tasks')
+const commentCollection = db.collection('comments')
 
 export{
-    db, auth, profileCollection, tasksCollection
+    db, auth, commentCollection
 }
